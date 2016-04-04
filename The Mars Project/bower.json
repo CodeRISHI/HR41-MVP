@@ -1,0 +1,35 @@
+{
+  "name": "the-mars-project",
+  "description": "A view of Mars through the eyes of the Mars Rover.",
+  "main": "app.js",
+  "authors": [
+    "Arun Vasudevan"
+  ],
+  "license": "UNLICENSED",
+  "keywords": [
+    "mvp",
+    "mars",
+    "MEAN",
+    "full",
+    "stack",
+    "app",
+    "web",
+    "app"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "homepage": "N/A",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "the-mars-project",
+  "version": "1.0.0",
+  "description": "A view of Mars through the eyes of the Mars Rover.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeRISHI/HR41-MVP.git"
+  },
+  "keywords": [
+    "mvp",
+    "mars",
+    "MEAN",
+    "full",
+    "stack",
+    "app",
+    "web",
+    "app"
+  ],
+  "author": "Arun Vasudevan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/CodeRISHI/HR41-MVP/issues"
+  },
+  "homepage": "https://github.com/CodeRISHI/HR41-MVP#readme"
+}
