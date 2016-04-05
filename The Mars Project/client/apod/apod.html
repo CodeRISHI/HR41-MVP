@@ -1,22 +1,24 @@
-<div class="container" ng-controller="ApodController">
-
-  <!--HEADER & FOOTER-->
-  <div ng-include="'../components/navbar/navbar.html'"></div>
-  <div ng-include="'../components/footer/footer.html'"></div>
+<!--HEADER & FOOTER-->
+<div ng-include="'../components/navbar/navbar.html'"></div>
+<div ng-include="'../components/footer/footer.html'"></div>
 
   <!--DATA-->
+  <div class="container-fluid" ng-controller="ApodController">
   <header class="hero-unit" id="banner">
-    <h1 class="site-title">APOD</h1>
+    <h1 class="site-title">Astronomy Picture of the Day</h1>
     <div class="button-group">
       <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showAPOD()">
         APOD
       </button>
     </div>
   </header>
-  <div class="data-container">
+  <div id="apod-data" class="data-container">
     <div class="title"><h4>{{apod.title}}</h4></div>
-    <iframe width="640" height="480" autohide="1" autoplay="0" src="{{apod.url}}"></iframe>
-    <img src="{{apod.url}}" />
-    <div class="desc"><h6>{{apod.explanation}}</h6></div>
+    <div id="apod-row" class="row">
+      <div class="col-md-12">
+        <iframe width="640" height="480" src="{{apod.url}}"></iframe>
+        <div id="apod-desc" class="desc"><h4>{{apod.explanation}}</h6></div>
+      </div>
+    </div>
   </div>
 </div>

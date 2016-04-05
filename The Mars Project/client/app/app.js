@@ -1,6 +1,7 @@
 angular.module('mars', [ 'mars.services',
   'mars.pictures',
   'mars.apod',
+  'mars.auth',
   'ngRoute'
   ])
 
@@ -14,14 +15,14 @@ angular.module('mars', [ 'mars.services',
       templateUrl: '../apod/apod.html',
       controller: 'ApodController'
     })
-    // .when('/login', {
-    //   templateUrl: 'app/auth/login.html',
-    //   controller: 'AuthController'
-    // })
-    // .when('/signup', {
-    //   templateUrl: 'app/auth/signup.html',
-    //   controller: 'AuthController'
-    // })
+    .when('/login', {
+      templateUrl: '../app/auth/login.html',
+      controller: 'AuthController'
+    })
+    .when('/signup', {
+      templateUrl: '../app/auth/signup.html',
+      controller: 'AuthController'
+    })
     .otherwise({
       redirectTo: '/'
     });

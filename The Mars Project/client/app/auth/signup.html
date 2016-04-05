@@ -1,0 +1,19 @@
+<!--HEADER & FOOTER-->
+<div ng-include="'../../components/navbar/navbar.html'"></div>
+<div ng-include="'../../components/footer/footer.html'"></div>
+
+<!--DATA-->
+<div class="container-fluid" ng-controller="AuthController">
+  <form id="signup-form" class="form-signup">
+    <h2 class="form-signup-heading">Sign Up</h2>
+    <label for="inputName" class="sr-only">Name</label>
+    <input type="email" id="inputName" class="form-control" placeholder="Name" required autofocus>
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+    <label for="inputUsername" class="sr-only">Username</label>
+    <input type="email" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+  </form>
+</div> <!-- /container -->

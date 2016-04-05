@@ -1,37 +1,49 @@
 <div ng-include="'../components/navbar/navbar.html'"></div>
 <div ng-include="'../components/footer/footer.html'"></div>
-    <div class="container" ng-controller="PicturesController">
+    <div class="container-fluid" ng-controller="PicturesController">
       <header class="hero-unit" id="banner">
         <h1 class="site-title">Curiosity</h1>
-        <div class="button-group">
-          <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('290', 'FHAZ')">
-            FHAZ
-          </button>
-          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('430', 'NAVCAM')">
-            NAVCAM
-          </button>
-          <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('540', 'MAST')">
-            MAST
-          </button>
-          <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('660', 'CHEMCAM')">
-            CHEMCAM
-          </button>
-          <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('770', 'MAHLI')">
-            MAHLI
-          </button>
-          <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('850', 'MARDI')">
-            MARDI
-          </button>
-          <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1300', 'RHAZ')">
-            RHAZ
-          </button>
-        </div>
+        <!-- <div class="row">
+          <div class="col-lg-6"> -->
+            <div class="button-group">
+              <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'FHAZ')">
+                FHAZ
+              </button>
+              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'NAVCAM')">
+                NAVCAM
+              </button>
+              <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'MAST')">
+                MAST
+              </button>
+              <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'CHEMCAM')">
+                CHEMCAM
+              </button>
+              <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'MAHLI')">
+                MAHLI
+              </button>
+              <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'MARDI')">
+                MARDI
+              </button>
+              <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1100', 'RHAZ')">
+                RHAZ
+              </button>
+            </div>
+          <!-- </div> -->
+          <!-- <div class="col-md-4">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="A number between 1 and 1300...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Go!</button>
+                </span>
+              </div>
+          </div>
+        </div> -->
       </header>
-      <div class="img-container" ng-repeat="camera in photos.photos">
-        <img src="{{camera.img_src}}" />
-        <div class="rover-info">
-          <span class="full-name"><h4>{{camera.camera.full_name}}</h4></span>
-          <span class="earth-date"><h4>{{camera.earth_date}}</h4></span>
+        <div id="rover-info" class="rover-info" ng-show="photos.photos[0].camera.full_name && photos.photos[0].earth_date">
+          <span class="full-name"><h4>{{photos.photos[0].camera.full_name}} | </h4></span>
+          <span class="earth-date"><h4>  Landing Date: {{photos.photos[0].earth_date | date: longDate}}</h4></span>
         </div>
+      <div class="img-container" ng-repeat="camera in photos.photos">
+        <img id="mars-pic" src="{{camera.img_src}}" />
+      </div>
     </div>
-  </div>

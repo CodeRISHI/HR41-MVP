@@ -8,7 +8,8 @@ var dbUri = 'mongodb://localhost/themarsproject';
 
 var app = express();
 
-// app.use(express.static('client'));
+// app.use(express.static('client')); <--TEST
+
 var cameraRouter = require('./routers/cameraRouter');
 
 mongoose.connect(dbUri);
@@ -19,8 +20,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/api/camera', function(req, res) {
   res.json({message: 'The Mars Project'});
 });
-
-// require('./routers/cameraRouter.js')(app, express);
 
 app.use('/api/camera', cameraRouter);
 

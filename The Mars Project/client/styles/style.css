@@ -3,30 +3,53 @@ body {
   height: 100vh;
 }
 
-.navbar-footer .navbar-brand {
-  text-align: center;
+#header {
+  margin: 0 80px 0 80px;
+}
+
+#header a {
+  color: #2D2D2E;
+  font-weight: 400;
+}
+
+#header a :hover {
+  background-color: #0D9AFF;
+}
+
+#header-title {
+  font-weight: 3em;
+}
+
+#footer {
+  width: 100vw;
+  background-color: #F8F8F8;
+}
+
+#footer #footer-text {
+  color: #2D2D2E;
+  margin: 0 auto;
+  font-weight: 200;
+  font-size: 0.9em;
 }
 
 #banner {
   border-bottom: none;
-  margin-top: -10px;
+  width: 100vw;
   background-color: #0D9AFF;
+  margin-bottom: 5px;
 }
 
 .hero-unit {
-  width: 100vw;
-  position: relative;
-  padding: 30px 15px;
+  padding: 40px;
   color: #F5F5F5;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: #4393B9;
-  margin-left: -150px;
+  margin-left: -15px;
 }
 
 .site-title {
-  /*border-bottom: none;*/
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -36,6 +59,38 @@ body {
 }
 
 .img-container {
-  float: none;
+  margin: 10px;
+}
+
+#mars-pic {
+  display: block;
+  outline: 2px solid #2D2D2E;
+  position: relative;
   margin: 0 auto;
+  width: 640px;
+  height: 480px;
+}
+#rover-info {
+  display: inline-flex;
+  text-align: center;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+#apod-row {
+  display: inline;
+}
+
+#apod-data {
+  margin: 0 25vw 0 25vw;
+}
+
+#login-form {
+  margin: 10vh 35vw 10vh 35vw;
+  padding: 5px;
+}
+
+#signup-form {
+  margin: 10vh 35vw 10vh 35vw;
+  padding: 5px;
 }
