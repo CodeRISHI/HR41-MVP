@@ -1,0 +1,36 @@
+body {
+  font-family: 'Raleway',
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -10px;
+  background-color: #0D9AFF;
+}
+
+.hero-unit {
+  width: 100vw;
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+  margin-left: -150px;
+}
+
+.site-title {
+  /*border-bottom: none;*/
+  margin-top: 60px;
+  text-align: center;
+}
+
+.button-group {
+  margin-top: 20px;
+  /*padding: 8px;*/
+}
+
+.img-container {
+  float: none;
+  margin: 0 auto;
+}

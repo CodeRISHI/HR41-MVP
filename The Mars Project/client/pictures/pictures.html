@@ -1,28 +1,33 @@
 <div class="container" ng-controller="PicturesController">
-  <h1>Curiosity</h1>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic(FHAZ)">
-    FHAZ
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic(NAVCAM)">
-    NAVCAM
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic(MAST)">
-    MAST
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
-    CHEMCAM
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
-    MAHLI
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
-    MARDI
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
-    RHAZ
-  </button>
-  <div class="img-container" ng-repeat="pic in photos.photos">
-    <img src="{{pic.img_src}}" />
-    <h4>{{pic.earth_date}}</h4>
+  <div ng-include="'../components/navbar/navbar.html'"></div>
+    <header class="hero-unit" id="banner">
+      <h1 class="site-title">Curiosity</h1>
+      <div class="button-group">
+        <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('290', 'FHAZ')">
+          FHAZ
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('430', 'NAVCAM')">
+          NAVCAM
+        </button>
+        <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('540', 'MAST')">
+          MAST
+        </button>
+        <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('660', 'CHEMCAM')">
+          CHEMCAM
+        </button>
+        <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('770', 'MAHLI')">
+          MAHLI
+        </button>
+        <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('850', 'MARDI')">
+          MARDI
+        </button>
+        <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic('1300', 'RHAZ')">
+          RHAZ
+        </button>
+      </div>
+    </header>
+    <div class="img-container" ng-repeat="pic in photos.photos">
+      <img src="{{pic.img_src}}" />
+      <h4>{{pic.earth_date}}</h4>
   </div>
 </div>

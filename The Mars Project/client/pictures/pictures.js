@@ -3,8 +3,8 @@ angular.module('mars.pictures', [])
 .controller('PicturesController', function($scope, Pictures) {
   $scope.photos = {};
 
-  $scope.showPic = function(cam) {
-    Pictures.getCuriosity(cam)
+  $scope.showPic = function(day, cam) {
+    Pictures.getCuriosity(day, cam)
     .then(function(resp) {
       $scope.photos = resp.data;
       console.log($scope.photos);
@@ -13,8 +13,4 @@ angular.module('mars.pictures', [])
       console.log(err);
     });
   };
-
-  //TEST
-  // $scope.showPic('MAST');
-
 });
