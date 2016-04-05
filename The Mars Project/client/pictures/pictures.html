@@ -1,0 +1,28 @@
+<div class="container" ng-controller="PicturesController">
+  <h1>Curiosity</h1>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic(FHAZ)">
+    FHAZ
+  </button>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic(NAVCAM)">
+    NAVCAM
+  </button>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off" ng-click="showPic(MAST)">
+    MAST
+  </button>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
+    CHEMCAM
+  </button>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
+    MAHLI
+  </button>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
+    MARDI
+  </button>
+  <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
+    RHAZ
+  </button>
+  <div class="img-container" ng-repeat="pic in photos.photos">
+    <img src="{{pic.img_src}}" />
+    <h4>{{pic.earth_date}}</h4>
+  </div>
+</div>

@@ -4,15 +4,19 @@
   <meta charset="utf-8">
   <title>The Mars Project</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css" />
-  <link rel="styleshee" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css"></script>
 </head>
 <body ng-app="mars">
 
   <!--ng-view directive-->
-  <div ng-view=""></div>
+  <div ng-view></div>
+  <!-- <div ng-controller="PicturesController">Hello Mars!</div> -->
 
-  <script src="../bower_components/angular/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.js"></script>
 
   <script src="app/app.js"></script>
+  <script src="services/services.js"></script>
+  <script src="pictures/pictures.js"></script>
 </body>
 </html>
