@@ -1,6 +1,7 @@
 angular.module('mars.pictures', [])
 
 .controller('PicturesController', function($scope, Pictures) {
+  //rover photos
   $scope.photos = {};
 
   $scope.showPic = function(day, cam) {

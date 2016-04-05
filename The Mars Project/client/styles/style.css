@@ -1,5 +1,10 @@
 body {
   font-family: 'Raleway',
+  height: 100vh;
+}
+
+.navbar-footer .navbar-brand {
+  text-align: center;
 }
 
 #banner {

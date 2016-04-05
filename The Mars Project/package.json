@@ -27,7 +27,9 @@
   },
   "homepage": "https://github.com/CodeRISHI/HR41-MVP#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "mongoose": "^4.4.11",
     "path": "^0.12.7"
   }
 }

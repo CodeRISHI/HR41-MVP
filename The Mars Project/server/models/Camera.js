@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-// Flesh out our Character schema and register the model with Mongoose
+// Flesh out our Camera schema and register the model with Mongoose
 
 var cameraSchema = new mongoose.Schema({
   name: {
@@ -12,6 +12,6 @@ var cameraSchema = new mongoose.Schema({
   imageUrl: String
 });
 
-var Camera = mongoose.model('camera', cameraSchema);
+var Camera = mongoose.model('Camera', cameraSchema);
 
 module.exports = Camera;

@@ -1,5 +1,6 @@
 angular.module('mars', [ 'mars.services',
   'mars.pictures',
+  'mars.apod',
   'ngRoute'
   ])
 
@@ -8,6 +9,10 @@ angular.module('mars', [ 'mars.services',
     .when('/', {
       templateUrl: '../pictures/pictures.html',
       controller: 'PicturesController'
+    })
+    .when('/apod', {
+      templateUrl: '../apod/apod.html',
+      controller: 'ApodController'
     })
     // .when('/login', {
     //   templateUrl: 'app/auth/login.html',

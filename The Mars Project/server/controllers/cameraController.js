@@ -75,14 +75,3 @@ exports.delete = function(req, res) {
     });
   });
 };
-
-var seedData = exports.seedData = function() {
-  Camera.create(gameOfThronesData, function(err, data) {
-    if (err) {
-      return err;
-    }
-    console.log(data);
-  });
-};
-
-seedData();

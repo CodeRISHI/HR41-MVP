@@ -8,7 +8,15 @@ angular.module('mars.services', [])
     });
   };
 
+  var getAPOD = function() {
+    return $http({
+      url: 'https://api.nasa.gov/planetary/apod?&hd&api_key=m83nQsNKsLPYhrnbCI38OFVUPYJeXjDnPLBGxqOS',
+      method: 'GET'
+    });
+  };
+
   return {
-    getCuriosity: getCuriosity
+    getCuriosity: getCuriosity,
+    getAPOD: getAPOD
   };
 });
