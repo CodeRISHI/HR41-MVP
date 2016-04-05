@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 var port = process.env.PORT || 8000;
-var dbUri = process.env.MONGOLAB_URI || 'mongodb://localhost/themarsproject';
+var dbUri = 'mongodb://localhost/themarsproject';
 
 var app = express();
 
@@ -16,11 +16,13 @@ mongoose.connect(dbUri);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function(req, res) {
+app.get('/api/camera', function(req, res) {
   res.json({message: 'The Mars Project'});
 });
 
-app.use('/api/pictures', cameraRouter);
+// require('./routers/cameraRouter.js')(app, express);
+
+app.use('/api/camera', cameraRouter);
 
 app.listen(port, function(err) {
   if (err) {
