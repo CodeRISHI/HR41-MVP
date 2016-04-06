@@ -8,6 +8,7 @@ angular.module('mars.pictures', [])
     Pictures.getCuriosity(day, cam)
     .then(function(resp) {
       $scope.photos = resp.data;
+      Pictures.storeData(resp.data);
       console.log($scope.photos);
     })
     .catch(function(err) {
