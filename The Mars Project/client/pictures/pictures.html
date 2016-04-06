@@ -1,5 +1,3 @@
-<div ng-include="'../components/navbar/navbar.html'"></div>
-<div ng-include="'../components/footer/footer.html'"></div>
     <div class="container-fluid" ng-controller="PicturesController">
       <header class="hero-unit" id="banner">
         <h1 class="site-title">Curiosity</h1>
@@ -40,8 +38,8 @@
         </div> -->
       </header>
         <div id="rover-info" class="rover-info" ng-show="photos.photos[0].camera.full_name && photos.photos[0].earth_date">
-          <span class="full-name"><h4>{{photos.photos[0].camera.full_name}} | </h4></span>
-          <span class="earth-date"><h4>  Landing Date: {{photos.photos[0].earth_date | date: longDate}}</h4></span>
+          <span class="full-name"><h4>{{photos.photos[0].camera.full_name}}</h4></span>
+          <span class="earth-date"><h4>Landing Date: {{photos.photos[0].earth_date | date: longDate}}</h4></span>
         </div>
       <div class="img-container" ng-repeat="camera in photos.photos">
         <img id="mars-pic" src="{{camera.img_src}}" />

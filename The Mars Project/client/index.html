@@ -9,9 +9,12 @@
 </head>
 <body ng-app="mars">
 
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
   <!--ng-view directive-->
   <div ng-view></div>
-  <!-- <div ng-controller="PicturesController">Hello Mars!</div> -->
+  
+  <div ng-include="'components/footer/footer.html'"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.js"></script>

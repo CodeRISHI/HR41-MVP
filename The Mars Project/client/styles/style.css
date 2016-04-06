@@ -71,9 +71,9 @@ body {
   height: 480px;
 }
 #rover-info {
-  display: inline-flex;
+  display: inline;
   text-align: center;
-  padding: 8px;
+  padding: -5px;
   margin: 0 auto;
 }
 
